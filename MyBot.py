@@ -32,7 +32,7 @@ while True:
 
     # For every ship that I control
     for ship in game_map.get_me().all_ships():
-
+        # If ship is docked
         if ship.docking_status != ship.DockingStatus.UNDOCKED:
             # Skip this ship
             ship_status()
@@ -53,6 +53,7 @@ while True:
             # If the planet is owned
             if planet.is_owned():
                 # Skip this planet
+                # We should attack the planet or the ships around the planet at some point
 
                 continue
 
