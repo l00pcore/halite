@@ -38,6 +38,7 @@ while True:
             ship_status()
             continue
 
+        # Sort planets by distance, unsure how to use it though
         entities_by_distance = game_map.nearby_entities_by_distance(ship)
         nearest_planet = None
         for distance in sorted(entities_by_distance):
