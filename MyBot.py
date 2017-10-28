@@ -8,7 +8,6 @@ import hlt
 # Then let's import the logging module so we can print out information
 import logging
 
-
 def ship_status():
         logging.info("\n\nShip " + str(ship.id)
                      + "\n" + "    health: " + str(ship.health)
@@ -32,7 +31,7 @@ while True:
 
     # For every ship that I control
     for ship in game_map.get_me().all_ships():
-        # If ship is docked
+        # If the ship is docked
         if ship.docking_status != ship.DockingStatus.UNDOCKED:
             # Skip this ship
             ship_status()
