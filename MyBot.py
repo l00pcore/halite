@@ -75,7 +75,7 @@ while True:
                     game_map,
                     speed=int(hlt.constants.MAX_SPEED/1.5),
                     ignore_ships=True)
-                #logging.info("ship " + str(ship.id) + " --navigating")
+
                 # If the move is possible, add it to the command_queue (if there are too many obstacles on the way
                 # or we are trapped (or we reached our destination!), navigate_command will return null;
                 # don't fret though, we can run the command again the next turn)
@@ -84,8 +84,6 @@ while True:
             break
 
         ship_status()
-
-
     # Send our set of commands to the Halite engine for this turn
     game.send_command_queue(command_queue)
     logging.info("--"*50)
