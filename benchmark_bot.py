@@ -1,5 +1,13 @@
 #!/usr/bin/python
 """
+Welcome to your first Halite-II bot!
+
+This bot's name is Settler. It's purpose is simple (don't expect it to win complex games :) ):
+1. Initialize game
+2. If a ship is not docked and there are unowned planets
+2.a. Try to Dock in the planet if close enough
+2.b If not, go towards the planet
+
 Note: Please do not place print statements here as they are used to communicate with the Halite engine. If you need
 to log anything use the logging module.
 """
@@ -10,9 +18,9 @@ import logging
 
 # GAME START
 # Here we define the bot's name as Settler and initialize the game, including communication with the Halite engine.
-game = hlt.Game("loopcore")
+game = hlt.Game("Settler")
 # Then we print our start message to the logs
-logging.info("Starting lpc bot!")
+logging.info("Starting Settler bot!")
 
 while True:
     # TURN START
@@ -33,7 +41,6 @@ while True:
             # If the planet is owned
             if planet.is_owned():
                 # Skip this planet
-                # ###################### Right now only one ship docks, we need to dock multiple ships. like 5 or 10 maybe?
                 continue
 
             # If we can dock, let's (try to) dock. If two ships try to dock at once, neither will be able to.
